@@ -1,0 +1,24 @@
+.box-lateral-panel {
+    width: 15vw;
+
+}
+
+.box-main {
+    width: 85vw;
+
+}
+
+.box-home {
+    width: 100%;
+}
+
+.btn-panel {
+    height: 50px;
+    border: none;
+    transition: .3s;
+    text-align: left;
+}
+
+.btn-panel:hover {
+    background-color: #066438 !important;
+}

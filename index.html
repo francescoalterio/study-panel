@@ -5,11 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Francesco</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h1>Erwe</h1>
+    <div class="container-fluid p-0 vh-100 d-flex">
+        <div class="box-lateral-panel vh-100 bg-success">
+            <button class="bg-success text-light fw-bold w-100 btn-panel">Home</button>
+            <button class="bg-success text-light fw-bold w-100 btn-panel">Technologies</button>
+            <button class="bg-success text-light fw-bold w-100 btn-panel">
+                Project Laboratory</button>
+        </div>
+        <main class="box-main bg-danger vh-100">
+            <div class="box-home vh-100 container-fluid bg-dark"></div>
+        </main>
+    </div>
     <script src="/js/database.js"></script>
     <script src="/js/app.js"></script>
 </body>
