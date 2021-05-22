@@ -8,9 +8,6 @@
 
 }
 
-.box-home {
-    width: 100%;
-}
 
 .btn-panel {
     height: 50px;
@@ -21,4 +18,30 @@
 
 .btn-panel:hover {
     background-color: #066438 !important;
+}
+
+.i {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+.box-home {
+    width: 100%;
+    padding-top: 5px;
+}
+
+.box-learning {
+    height: 40vh;
+}
+
+.divisor {
+    width: 100%;
+    height: 3px !important;
+    margin: 15px 0;
+    background-color: rgb(197, 197, 197);
+}
+
+.box-my-tech {
+    height: 55vh;
 }
