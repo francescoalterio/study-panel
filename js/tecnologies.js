@@ -7,7 +7,7 @@ function cargarTecnologias () {
     tecnologias.forEach(element => {
         const tecnologia = document.createElement('div');
         tecnologia.classList.add('tecnologia');
-        tecnologia.innerHTML = `<img class="tech-img" src="assets/HTML5_Badge_512.png" alt="" srcset="">
+        tecnologia.innerHTML = `<img class="tech-img" src="assets/${element.img}" alt="" srcset="">
         <p class="title-tech fs-2 fw-bold">${element.nombre}</p>
         <div class="box-tech-btn">
             <button class="btn-add-list btn btn-primary">Add to list</button>

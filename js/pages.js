@@ -6,20 +6,8 @@ const btnTech = document.getElementById('btn-tech');
 const btnLab = document.getElementById('btn-lab');
 
 document.addEventListener('DOMContentLoaded', () => {
-    if ( localStorage.getItem('pagina') == null ) {
-
-        paginaHome()
-        localStorage.setItem('pagina', 'home')
-
-    } else if ( localStorage.getItem('pagina') == 'home' ) {
-
-        paginaHome()
-        
-    } else if ( localStorage.getItem('pagina') == 'tecnologias' ) {
-
-        paginaTecnologias()
-
-    }
+    
+    paginaHome()
 })
 
 cargarListeners()
@@ -31,6 +19,7 @@ function cargarListeners () {
 
     btnTech.addEventListener('click', () => {
         paginaTecnologias()
+        cargarTecnologias()
     })
 }
 
@@ -77,6 +66,9 @@ function paginaTecnologias () {
             </form>
             </div>
         </nav>
+        <div class="container-tecnologias">
+                    
+        </div>
     </div>`
 
     localStorage.setItem('pagina', 'tecnologias')
