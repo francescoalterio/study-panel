@@ -105,6 +105,27 @@
 
 .box-tecnologias {
     width: 100%;
-    background-color: rgb(219, 219, 219) !important;
+    background-color: rgb(255, 255, 255) !important;
     padding: 0;
+}
+
+.tecnologia {
+    width: 250px;
+    height: 300px;
+    background-color: rgb(219, 219, 219);
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 0 2px 0px rgb(121, 121, 121);
+}
+
+.tech-img {
+    width: 150px;
+    height: 150px;
+}
+
+.title-tech {
+
 }

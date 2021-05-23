@@ -18,35 +18,7 @@
             <button id="btn-lab" class="bg-success text-light fw-bold w-100 btn-panel"><i class="fas fa-flask i"></i>Project Laboratory</button>
         </div>
         <main class="box-main bg-light vh-100">
-
-            <!-- Home -->
-            <div class="box-home vh-100 container-fluid bg-light">
-                <div class="container-fluid box-learn">
-                    <div class="box-learning">
-                        <p class="sin-aprender">You are not learning any technology</p>
-                        <div class="box-learn-btn">
-                            <button class="learn btn btn-success fw-bold fs-6 btn-lg">Learn a technology</button>
-                            <button class="learn btn btn-primary fw-bold fs-6 btn-lg">Create a project</button>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="container-fluid box-my-tech">
-                    <div class="box-sin-tech">
-                        <h2 class="title-my-tech fs-1 fw-bold mt-2">My list</h2>
-                        <div class="box-agregar-tecnologia">
-                            <p class="sin-tech fs-4 fw-bold">You don't have technologies on your list</p>
-                            <div class="box-sin-tech-btn">
-                                <button class="btn-agregar-tech btn btn-outline-danger btn-lg fs-6">Add technology</button>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tecnologias -->
-            <div class="vh-100 container-fluid bg-light box-tecnologias d-none">
+            <div class="vh-100 container-fluid bg-light box-tecnologias">
                 <nav class="navbar navbar-dark bg-dark">
                     <div class="container-fluid">
                     <a class="navbar-brand">Navbar</a>
@@ -56,12 +28,21 @@
                     </form>
                     </div>
                 </nav>
+
+                <div class="tecnologia">
+                    <img class="tech-img" src="assets/HTML5_Badge_512.png" alt="" srcset="">
+                    <p class="title-tech fs-2 fw-bold">HTML</p>
+                    <div class="box-tech-btn">
+                        <button class="btn-add-list btn btn-primary">Add to list</button>
+                        <button class="btn-learn btn btn-success">Learn</button>
+                    </div>
+                </div>
             </div>
-                
         </main>
     </div>
     <script src="js/database.js"></script>
-    <script src="js/app.js"></script>
+    <!-- <script src="js/pages.js"></script> -->
+    <script src="js/tecnologies.js"></script>
     <script src="https://kit.fontawesome.com/8915750682.js" crossorigin="anonymous"></script>
 </body>
 </html>
