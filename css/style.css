@@ -102,3 +102,9 @@
 .sin-tech {
     color: rgb(117, 117, 117);
 }
+
+.box-tecnologias {
+    width: 100%;
+    background-color: rgb(219, 219, 219) !important;
+    padding: 0;
+}
