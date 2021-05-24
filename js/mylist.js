@@ -14,29 +14,18 @@ function verificarLista () {
 function agregarTechAList () {
     myList = []
 
-        if ( localStorage.getItem('myList1') == '' ) {
-
-        } else {
+        if ( localStorage.getItem('myList1') !== '' ) {
             myList.push(localStorage.getItem('myList1'))
-        }
-
-        if ( localStorage.getItem('myList2') == '' ) {
-
-        } else {
+        } 
+        if ( localStorage.getItem('myList2') !== '' ) {
             myList.push(localStorage.getItem('myList2'))
         }
-
-        if ( localStorage.getItem('myList3') == '' ) {
-
-        } else {
+        if ( localStorage.getItem('myList3') !== '' ) {
             myList.push(localStorage.getItem('myList3'))
-        }
-
-        if ( localStorage.getItem('myList4') == '' ) {
-
-        } else {
+        } 
+        if ( localStorage.getItem('myList4') !== '' ) {
             myList.push(localStorage.getItem('myList4'))
-        }
+        } 
 
 }
 
@@ -59,10 +48,12 @@ function clickBtnAddList () {
     containerTecnologias.addEventListener('click', e => {
         if (e.target.classList.contains('btn-add-list')) {
             agregarTechALocal(e.target.parentElement.parentElement.querySelector('.title-tech').textContent) 
+
+            agregarTechAList()
+            console.log(myList)
         }
         
-        agregarTechAList()
-        console.log(myList)
+        
     })
 }
 
