@@ -71,6 +71,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-flow: column;
     background-color: rgb(219, 219, 219);
     border-radius: 10px;
     box-shadow: 0 0 2px 0px rgb(182, 182, 182);
@@ -104,6 +105,14 @@ body {
 
 .sin-tech {
     color: rgb(117, 117, 117);
+}
+
+.my-tech-zone {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 
