@@ -8,12 +8,14 @@ const btnLab = document.getElementById('btn-lab');
 document.addEventListener('DOMContentLoaded', () => {
     paginaHome()
     verificarLista()
+    verificarMyListHome()
 })
 
 cargarListeners()
 function cargarListeners () {
     btnHome.addEventListener('click', () => {
         paginaHome()
+        verificarMyListHome()
     })
 
     btnTech.addEventListener('click', () => {
@@ -38,16 +40,8 @@ function paginaHome () {
             
         </div>
         <div class="container-fluid box-my-tech">
-            <div class="box-sin-tech">
-                <h2 class="title-my-tech fs-1 fw-bold mt-2">My list</h2>
-                <div class="box-agregar-tecnologia">
-                    <p class="sin-tech fs-4 fw-bold">You don't have technologies on your list</p>
-                    <div class="box-sin-tech-btn">
-                        <button class="btn-agregar-tech btn btn-outline-danger btn-lg fs-6">Add technology</button>
-                    </div>
-                </div>
-                
-            </div>
+            <h2 class="title-my-tech fs-1 fw-bold mt-2">My list</h2>
+            <div class="my-tech-zone"></div>
         </div>
     </div>`
 
