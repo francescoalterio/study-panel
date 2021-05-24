@@ -6,20 +6,20 @@ const btnTech = document.getElementById('btn-tech');
 const btnLab = document.getElementById('btn-lab');
 
 document.addEventListener('DOMContentLoaded', () => {
-    
     paginaHome()
+    verificarLista()
 })
 
 cargarListeners()
 function cargarListeners () {
     btnHome.addEventListener('click', () => {
-        console.log('erwe')
         paginaHome()
     })
 
     btnTech.addEventListener('click', () => {
         paginaTecnologias()
         cargarTecnologias()
+        clickBtnAddList()
     })
 }
 
