@@ -105,6 +105,14 @@ function myListVacia () {
     </div>`
 
     boxMyTechZone.appendChild(sinTech)
+
+    sinTech.addEventListener('click', e => {
+        if (e.target.classList.contains('btn-agregar-tech')) {
+            paginaTecnologias()
+            cargarTecnologias()
+            clickBtnAddList()
+        }
+    })
 }
 
 
