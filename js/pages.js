@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     paginaHome()
     verificarLista()
     verificarMyListHome()
+    verificarLearning()
 })
 
 cargarListeners()
@@ -16,12 +17,14 @@ function cargarListeners () {
     btnHome.addEventListener('click', () => {
         paginaHome()
         verificarMyListHome()
+        verificarLearning()
     })
 
     btnTech.addEventListener('click', () => {
         paginaTecnologias()
         cargarTecnologias()
         clickBtnAddList()
+        verificarLearning()
     })
 }
 
@@ -30,14 +33,7 @@ function paginaHome () {
     main.innerHTML = `<!-- Home -->
     <div class="box-home vh-100 container-fluid bg-light">
         <div class="container-fluid box-learn">
-            <div class="box-learning">
-                <p class="sin-aprender">You are not learning any technology</p>
-                <div class="box-learn-btn">
-                    <button class="learn btn btn-success fw-bold fs-6 btn-lg">Learn a technology</button>
-                    <button class="learn btn btn-primary fw-bold fs-6 btn-lg">Create a project</button>
-                </div>
-            </div>
-            
+           
         </div>
         <div class="container-fluid box-my-tech">
             <h2 class="title-my-tech fs-1 fw-bold mt-2">My list</h2>
@@ -46,6 +42,7 @@ function paginaHome () {
     </div>`
 
     localStorage.setItem('pagina', 'home')
+
 }
 
 function paginaTecnologias () {
@@ -66,4 +63,6 @@ function paginaTecnologias () {
     </div>`
 
     localStorage.setItem('pagina', 'tecnologias')
+
+    
 }

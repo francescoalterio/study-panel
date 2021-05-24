@@ -82,7 +82,7 @@ function cargarTechMyList (listMyTech) {
         tecnologia.innerHTML = `<img class="tech-img" src="assets/${element.img}" alt="" srcset="">
         <p class="title-tech fs-2 fw-bold">${element.nombre}</p>
         <div class="box-tech-btn">
-            <button class="btn-learn btn btn-success">Learn</button>
+            <button class="btn-tech-learn btn btn-success">Learn</button>
             <button class="btn-list-remove btn btn-danger">Remove</button>
         </div>`
 
@@ -90,6 +90,7 @@ function cargarTechMyList (listMyTech) {
     });
 
     removerTechMyList()
+    addTechLearning ()
 }
 
 function myListVacia () {
@@ -134,19 +135,39 @@ function removerTechMyList () {
         if (e.target.classList.contains('btn-list-remove')) {
             const techRemove = e.target.parentElement.parentElement.querySelector('.title-tech').textContent;
 
-            if ( localStorage.getItem('myList1') === techRemove ) {
+            removerTechMyListWithClick (techRemove)
+        }
+    })
+}
+
+function removerTechMyListWithClick (eTarget) {
+
+            if ( localStorage.getItem('myList1') === eTarget ) {
                 localStorage.setItem('myList1', '')
-            } else if ( localStorage.getItem('myList2') === techRemove ) {
+            } else if ( localStorage.getItem('myList2') === eTarget ) {
                 localStorage.setItem('myList2', '')
-            } else if ( localStorage.getItem('myList3') === techRemove ) {
+            } else if ( localStorage.getItem('myList3') === eTarget ) {
                 localStorage.setItem('myList3', '')
-            } else if ( localStorage.getItem('myList4') === techRemove ) {
+            } else if ( localStorage.getItem('myList4') === eTarget ) {
                 localStorage.setItem('myList4', '')
             }
 
             agregarTechAList()
             limpiarHTMLMyList()
             verificarMyListHome()
+}
+
+function addTechLearning () {
+    const boxMyTechZone = document.querySelector('.my-tech-zone');
+
+    boxMyTechZone.addEventListener('click', e => {
+        if (e.target.classList.contains('btn-tech-learn')) {
+            const techToLearn = e.target.parentElement.parentElement.querySelector('.title-tech').textContent;
+
+            localStorage.setItem('learning', techToLearn)
+            verificarLearning()
+            
+            removerTechMyListWithClick(techToLearn)
         }
     })
 }
