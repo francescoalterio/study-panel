@@ -50,7 +50,6 @@ function clickBtnAddList () {
             agregarTechALocal(e.target.parentElement.parentElement.querySelector('.title-tech').textContent) 
 
             agregarTechAList()
-            console.log(myList)
 
         }
         
@@ -84,11 +83,13 @@ function cargarTechMyList (listMyTech) {
         <p class="title-tech fs-2 fw-bold">${element.nombre}</p>
         <div class="box-tech-btn">
             <button class="btn-learn btn btn-success">Learn</button>
-            <button class="btn-add-list btn btn-danger">Remove</button>
+            <button class="btn-list-remove btn btn-danger">Remove</button>
         </div>`
 
         boxMyTechZone.appendChild(tecnologia)
     });
+
+    removerTechMyList()
 }
 
 function myListVacia () {
@@ -126,3 +127,31 @@ function verificarMyListHome () {
 
 }
 
+function removerTechMyList () {
+    const boxMyTechZone = document.querySelector('.my-tech-zone');
+
+    boxMyTechZone.addEventListener('click', e => {
+        if (e.target.classList.contains('btn-list-remove')) {
+            const techRemove = e.target.parentElement.parentElement.querySelector('.title-tech').textContent;
+
+            if ( localStorage.getItem('myList1') === techRemove ) {
+                localStorage.setItem('myList1', '')
+            } else if ( localStorage.getItem('myList2') === techRemove ) {
+                localStorage.setItem('myList2', '')
+            } else if ( localStorage.getItem('myList3') === techRemove ) {
+                localStorage.setItem('myList3', '')
+            } else if ( localStorage.getItem('myList4') === techRemove ) {
+                localStorage.setItem('myList4', '')
+            }
+
+            agregarTechAList()
+            limpiarHTMLMyList()
+            verificarMyListHome()
+        }
+    })
+}
+
+function limpiarHTMLMyList () {
+    const boxMyTechZone = document.querySelector('.my-tech-zone');
+    boxMyTechZone.innerHTML = ''
+}
