@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     verificarLista()
     verificarMyListHome()
     verificarLearning()
+    crearNuevoDominated()
 })
 
 cargarListeners()
@@ -25,6 +26,11 @@ function cargarListeners () {
         cargarTecnologias()
         clickBtnAddList()
         verificarLearning()
+    })
+
+    btnDominated.addEventListener('click', () => {
+        paginaDominated()
+        crearArrayDominated()
     })
 }
 
@@ -63,6 +69,19 @@ function paginaTecnologias () {
     </div>`
 
     localStorage.setItem('pagina', 'tecnologias')
+
+    
+}
+
+function paginaDominated () {
+    main.innerHTML = `<!-- Dominated -->
+    <div class="vh-100 container-fluid bg-light box-dominated">
+        <h2 class="p-3 fs-1 fw-bold title-dominated">Dominated</h2>
+        <div class="container-dominated">       
+        </div>
+    </div>`
+
+    localStorage.setItem('pagina', 'dominated')
 
     
 }

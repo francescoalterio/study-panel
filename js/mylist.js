@@ -47,13 +47,12 @@ function clickBtnAddList () {
 
     containerTecnologias.addEventListener('click', e => {
         if (e.target.classList.contains('btn-add-list')) {
-            agregarTechALocal(e.target.parentElement.parentElement.querySelector('.title-tech').textContent) 
 
-            agregarTechAList()
-
+            if (localStorage.getItem('myList1') !== e.target.parentElement.parentElement.querySelector('.title-tech').textContent && localStorage.getItem('myList2') !== e.target.parentElement.parentElement.querySelector('.title-tech').textContent && localStorage.getItem('myList3') !== e.target.parentElement.parentElement.querySelector('.title-tech').textContent && localStorage.getItem('myList4') !== e.target.parentElement.parentElement.querySelector('.title-tech').textContent) {
+                agregarTechALocal(e.target.parentElement.parentElement.querySelector('.title-tech').textContent) 
+                agregarTechAList()
+            }
         }
-        
-        
     })
 }
 

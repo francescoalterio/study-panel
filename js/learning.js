@@ -97,9 +97,18 @@ function listenersBtnsLearning () {
 
     boxLearn.addEventListener('click', e => {
         if ( e.target.classList.contains('btn-completed-learning')) {
+            
+            e.preventDefault();
+            e.stopImmediatePropagation();
+
+            const nombreTech = e.target.parentElement.parentElement.querySelector('.title-learning-tech').textContent
+
+            console.log('repitiendo...')
+            
             limpiarLearningLocal()
             limpiarHTMLLearning ()
             verificarLearning ()
+            noAgregarRepetido (nombreTech)
         }
     })
 
