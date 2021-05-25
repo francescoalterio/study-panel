@@ -3,10 +3,15 @@ function cargarTecnologias () {
 
     const tecnologias = [...database];
 
-    let i = 0
-
+    var objetoIterado = ''
 
     tecnologias.forEach(element => {
+
+        let dominatedCompleto = JSON.parse( localStorage.getItem('dominated' ))
+
+        const dominatedIterado= dominatedCompleto.filter( e => e.nombre === element.nombre)
+        const objectSeguro = dominatedIterado[0]
+        console.log(objectSeguro)
 
         if (localStorage.getItem('learning') === element.nombre) {
             const tecnologia = document.createElement('div');
@@ -30,7 +35,18 @@ function cargarTecnologias () {
 
             containerTecnologias.appendChild(tecnologia)
 
-        } else if (JSON.parse( localStorage.getItem('dominated' ))[i]) {
+        } else if (dominatedCompleto === undefined) {
+            const tecnologia = document.createElement('div');
+            tecnologia.classList.add('tecnologia');
+            tecnologia.innerHTML = `<img class="tech-img" src="assets/${element.img}" alt="" srcset="">
+            <p class="title-tech fs-2 fw-bold">${element.nombre}</p>
+            <div class="box-tech-btn">
+                erwe
+            </div>`
+
+            containerTecnologias.appendChild(tecnologia)
+
+        } else if (objectSeguro !== undefined) {
             const tecnologia = document.createElement('div');
             tecnologia.classList.add('tecnologia');
             tecnologia.innerHTML = `<img class="tech-img" src="assets/${element.img}" alt="" srcset="">
@@ -41,7 +57,6 @@ function cargarTecnologias () {
 
             containerTecnologias.appendChild(tecnologia)
 
-            i++
         } else { 
             const tecnologia = document.createElement('div');
             tecnologia.classList.add('tecnologia');
@@ -86,7 +101,16 @@ function crearTecnologiasSearch (busqueda) {
 
     let i = 0
 
+    
+
+    
+
     copiaBusqueda.forEach(element => {
+
+        let dominatedCompleto = JSON.parse( localStorage.getItem('dominated' ))
+
+        const dominatedIterado= dominatedCompleto.filter( e => e.nombre === element.nombre)
+        const objectSeguro = dominatedIterado[0]
 
         if (localStorage.getItem('learning') === element.nombre) {
             const tecnologia = document.createElement('div');
@@ -110,7 +134,19 @@ function crearTecnologiasSearch (busqueda) {
 
             containerTecnologias.appendChild(tecnologia)
 
-        } else if (JSON.parse( localStorage.getItem('dominated' ))[i]) {
+        } else if (dominatedCompleto === undefined) {
+            const tecnologia = document.createElement('div');
+            tecnologia.classList.add('tecnologia');
+            tecnologia.innerHTML = `<img class="tech-img" src="assets/${element.img}" alt="" srcset="">
+            <p class="title-tech fs-2 fw-bold">${element.nombre}</p>
+            <div class="box-tech-btn">
+                <button class="btn-add-list btn btn-primary">Add to list</button>
+                <button class="btn-learn btn btn-success">Learn</button>
+            </div>`
+
+            containerTecnologias.appendChild(tecnologia)
+            
+        } else if (objectSeguro !== undefined) {
             const tecnologia = document.createElement('div');
             tecnologia.classList.add('tecnologia');
             tecnologia.innerHTML = `<img class="tech-img" src="assets/${element.img}" alt="" srcset="">
@@ -120,8 +156,7 @@ function crearTecnologiasSearch (busqueda) {
             </div>`
 
             containerTecnologias.appendChild(tecnologia)
-
-            i++
+            
         } else { 
             const tecnologia = document.createElement('div');
             tecnologia.classList.add('tecnologia');
