@@ -223,4 +223,11 @@ const database = [
 
 },
 
+{
+    id: 33,
+    nombre: 'Bootstrap',
+    img: 'bootstrap.png'
+
+},
+
 ]
