@@ -32,7 +32,7 @@ function filterTech () {
     const copiaDatabase = [...database];
     const inputSearchValue = document.querySelector('.input-search')
 
-    const busqueda = copiaDatabase.filter( e => e.nombre.toLowerCase().includes(inputSearchValue.value) )
+    const busqueda = copiaDatabase.filter( e => e.nombre.toLowerCase().includes(inputSearchValue.value.toLowerCase()) )
 
     console.log(busqueda)
 
