@@ -48,6 +48,8 @@ function addLearningALocal () {
             
             
             localStorage.setItem('learning', tecnologia)
+
+            filterTech ()
         }
     })
 }

@@ -52,6 +52,8 @@ function clickBtnAddList () {
                 agregarTechALocal(e.target.parentElement.parentElement.querySelector('.title-tech').textContent) 
                 agregarTechAList()
             }
+
+            filterTech ()
         }
     })
 }
