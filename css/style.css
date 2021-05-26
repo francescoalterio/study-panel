@@ -171,8 +171,9 @@ body {
     display: flex;
     justify-content: space-evenly;
     flex-flow: row wrap;
-    overflow: scroll;
+    overflow:scroll;
     padding-bottom: 40px;
+
 }
 
 .tecnologia {
@@ -214,23 +215,6 @@ body {
     padding-bottom: 40px;
 }
 
-.tecnologia {
-    width: 250px;
-    height: 300px;
-    margin: 20px;
-    background-color: rgb(219, 219, 219);
-    border-radius: 20px;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-evenly;
-    align-items: center;
-    box-shadow: 0 0 5px 0px rgb(121, 121, 121);
-}
-
-.tech-img {
-    width: 150px;
-    height: 150px;
-}
 
 .title-dominated {
     background-color: rgb(219, 219, 219);
@@ -240,4 +224,128 @@ body {
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 5px 0px rgb(121, 121, 121);
+}
+
+/* Task */
+
+.box-task {
+    width: 100%;
+    background-color: rgb(255, 255, 255) !important;
+    padding: 0;
+}
+
+.container-task {
+    width: 100%;
+    height: 70%;
+    overflow: scroll;
+}
+
+
+.title-task {
+    background-color: rgb(219, 219, 219);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px 0px rgb(121, 121, 121);
+}
+
+.container-form-task {
+    width:100%;
+    height: 100px;;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box-input {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-input-task {
+    margin: 0 10px 0 0;
+}
+
+.description-input-task {
+    margin: 0 10px 0 0;
+}
+
+#input-description {
+    width: 400px;
+    background-color: rgb(219, 219, 219);
+    border: none;
+    border-radius: 50px;
+    height: 40px;
+    outline: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#input-name {
+    background-color: rgb(219, 219, 219);
+    border: none;
+    border-radius: 50px;
+    height: 40px;
+    outline: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.hr-task {
+    margin: 0;
+}
+
+.container-titles-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.title-name {
+    flex: 1 1 auto;
+    margin: 0;
+}
+
+.title-description {
+    flex: 1 1 auto;
+    margin: 0;
+}
+
+.box-task-title-btn {
+    margin: 0;
+    margin-right: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px;
+    margin-right: 0;
+}
+
+.name-task {
+    width: 30%;
+
+}
+
+.description-task {
+    width: 57%;
+}
+
+.box-task-btn {
+    justify-content: end;
+    display: flex;
+}
+
+.btn-task {
+    margin: 3px;
 }
