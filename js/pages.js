@@ -4,7 +4,6 @@ const btnHome = document.getElementById('btn-home');
 const btnDominated = document.getElementById('btn-dominated');
 const btnTech = document.getElementById('btn-tech');
 const btnTask = document.getElementById('btn-task');
-const btnLab = document.getElementById('btn-lab');
 
 document.addEventListener('DOMContentLoaded', () => {
     paginaHome()
