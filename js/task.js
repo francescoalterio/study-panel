@@ -16,6 +16,7 @@ function cargarListenersTask () {
     })
 
     clickRemoveTask ()
+    clickEditarTask ()
 }
 
 function getInputsValue () {
@@ -132,5 +133,45 @@ function EliminarTask (id) {
     eliminarDelLocalTask (id)
 }
 
+function clickEditarTask () {
+    const containerTask = document.querySelector('.container-task')
+
+    containerTask.addEventListener('click', e => {
+        if (e.target.classList.contains('btn-completed-task')) {
+            verificacionTaskCompleted(e.target.parentNode.parentNode)
+            EliminarTask(e.target.parentNode.parentNode.getAttribute('id'))
+            
+        } else if (e.target.classList.contains('fa-check')) {
+            verificacionTaskCompleted(e.target.parentNode.parentNode.parentNode)
+            EliminarTask(e.target.parentNode.parentNode.parentNode.getAttribute('id'))
+        }
+    })
+}
+
+function verificacionTaskCompleted (target) {
+    const taskCompleted = {
+        name: target.querySelector('.name-task').textContent,
+        description: target.querySelector('.description-task').textContent,
+        completed:true,
+    }
+    
+    if (localStorage.getItem('taskCompleted') === null) {
+        localStorage.setItem('taskCompleted', JSON.stringify([]))
+
+        const copiaTaskCompletedLocal = JSON.parse(localStorage.getItem('taskCompleted'))
+
+        copiaTaskCompletedLocal.push(taskCompleted)
+        localStorage.setItem('taskCompleted', JSON.stringify([]))
+        localStorage.setItem('taskCompleted', JSON.stringify(copiaTaskCompletedLocal))
+
+    } else if (localStorage.getItem('task') !== null) {
+        const copiaTaskCompletedLocal = JSON.parse(localStorage.getItem('taskCompleted'))
+
+        copiaTaskCompletedLocal.push(taskCompleted)
+        localStorage.setItem('taskCompleted', JSON.stringify([]))
+        localStorage.setItem('taskCompleted', JSON.stringify(copiaTaskCompletedLocal))
+
+    }
+}
 
 
