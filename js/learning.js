@@ -107,6 +107,7 @@ function listenersBtnsLearning () {
 
             console.log('repitiendo...')
             
+            mensajeDominatedMover (nombreTech)
             limpiarLearningLocal()
             limpiarHTMLLearning ()
             verificarLearning ()

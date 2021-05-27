@@ -114,6 +114,7 @@ function myListVacia () {
             paginaTecnologias()
             cargarTecnologias()
             clickBtnAddList()
+            verificarLearning()
         }
     })
 }

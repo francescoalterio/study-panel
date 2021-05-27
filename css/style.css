@@ -442,3 +442,38 @@ body {
     flex-flow: column;
     align-items: center;
 }
+
+/* Detalles */
+
+.mensaje-dominated {
+    width: 480px;
+    height: 50px;
+    position: fixed;
+    right: -50%;
+    background-color: rgb(44, 126, 28);
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    border-radius: 10px;
+}
+
+.mensaje-dominated-agregar {
+    right: -5%;
+}
+
+.mensaje-cambiante {
+    margin-bottom: 0;
+    margin-left: 20px;
+    color: #ffffff;
+}
+
+.x {
+    background: none;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}

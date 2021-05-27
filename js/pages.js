@@ -49,6 +49,10 @@ function cargarListeners () {
 function paginaHome () {
     main.innerHTML = `<!-- Home -->
     <div class="box-home vh-100 container-fluid bg-light">
+        <div class="mensaje-dominated">
+            <p class="fw-bold mensaje-cambiante"></p>
+            <button class="x fw-bold fs-4"><i class="fas fa-times"></i></button>
+        </div>
         <div class="container-fluid box-learn">
            
         </div>
