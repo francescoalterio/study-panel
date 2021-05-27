@@ -4,6 +4,7 @@ const btnHome = document.getElementById('btn-home');
 const btnDominated = document.getElementById('btn-dominated');
 const btnTech = document.getElementById('btn-tech');
 const btnTask = document.getElementById('btn-task');
+const btnTaskCompleted = document.getElementById('btn-task-completed');
 
 document.addEventListener('DOMContentLoaded', () => {
     paginaHome()
@@ -36,6 +37,11 @@ function cargarListeners () {
     btnTask.addEventListener('click', () => {
         paginaTask()
         verificarTaskLocal ()
+    })
+
+    btnTaskCompleted.addEventListener('click', () => {
+        paginaTaskCompleted()
+        CrearTaskCompletedHTML()
     })
 }
 
@@ -130,4 +136,25 @@ function paginaTask () {
     </div>`
 
     localStorage.setItem('pagina', 'task')
+}
+
+function paginaTaskCompleted () {
+    main.innerHTML = `<!-- Task -->
+    <div class="vh-100 container-fluid bg-light box-dominated">
+        <h2 class="p-3 fs-1 fw-bold title-dominated">Completed Tasks</h2>
+        <div class="container-titles-task completed">  
+            <p class="title-name fs-6 fw-bold">Name</p>
+            <p class="title-description fs-6 fw-bold">Description</p>
+            <div class="box-task-title-btn">
+                <p class="title-description fs-6 fw-bold">Buttons</p>
+            </div>
+        </div>
+        <hr class="hr-completed">
+        <div class="container-task-completed">       
+        </div>
+    </div>`
+
+    localStorage.setItem('pagina', 'completed-tasks')
+
+    
 }
