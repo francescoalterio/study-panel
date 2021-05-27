@@ -22,7 +22,7 @@ function crearBoxNoLearn () {
     boxNoLearn.innerHTML = `<p class="sin-aprender">You are not learning any technology</p>
     <div class="box-learn-btn">
         <button class="learn btn-learn-home btn btn-success fw-bold fs-6 btn-lg">Learn a technology</button>
-        <button class="learn btn btn-primary fw-bold fs-6 btn-lg">Create a project</button>
+        <button class="learn btn-task-home btn btn-primary fw-bold fs-6 btn-lg">Create a task</button>
     </div>`
 
     boxLearn.appendChild(boxNoLearn)
@@ -32,6 +32,9 @@ function crearBoxNoLearn () {
             paginaTecnologias()
             cargarTecnologias()
             clickBtnAddList()
+        } if (e.target.classList.contains('btn-task-home')) {
+            paginaTask()
+            verificarTaskLocal ()
         }
     })
 }
